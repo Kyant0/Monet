@@ -4,7 +4,7 @@
 
 **A Jetpack Compose library that creates your own Material3 palettes**
 
-[Interactive demo](docs/index.html)
+[Interactive demo](https://Kyant0.github.io/Monet)
 
 ## Usages
 
@@ -26,6 +26,7 @@ MaterialTheme(colorScheme = colorScheme) {
 ```
 
 Get more customizable:
+
 ```kotlin
 // Don't limit to the default M3 palettes, use them in your own way
 CompositionLocalProvider(LocalTonalPalettes provides palettes) {
@@ -34,6 +35,7 @@ CompositionLocalProvider(LocalTonalPalettes provides palettes) {
 ```
 
 Low-level APIs:
+
 ```kotlin
 val rgb = Srgb(0.5, 0.5, 0.5)
 rgb.toCam16()
