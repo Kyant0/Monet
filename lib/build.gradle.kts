@@ -4,6 +4,14 @@ plugins {
     kotlin("android")
 }
 
+publishing {
+    publications.create("maven_public", MavenPublication::class) {
+        groupId = "com.kyant"
+        artifactId = "monet"
+        version = "0.0.1-dev01"
+    }
+}
+
 @Suppress("UnstableApiUsage")
 android {
     namespace = "com.kyant.monet"
