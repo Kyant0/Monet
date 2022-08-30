@@ -9,29 +9,29 @@
 ## Usages
 
 ```kotlin
-// pick a key color
+// Choose a key color
 val color = Color.Blue
 
-// generate tonal palettes with Vibrant style
+// Generate tonal palettes with Vibrant style
 val palettes = color.toHct().generateTonalPalettes(style = PaletteStyle.Vibrant)
 
-// generate Compose Material3 color scheme
-val colorScheme = palettes.toColorScheme()
+// In your Theme.kt
+CompositionLocalProvider(LocalTonalPalettes provides palettes) {
+    // Map TonalPalettes to Compose Material3 ColorScheme
+    val colorScheme = dynamicColorScheme()
 
-// in your Theme.kt
-MaterialTheme(colorScheme = colorScheme) {
-    // primary color, use as normal
-    MaterialTheme.colorScheme.primary
+    MaterialTheme(colorScheme = colorScheme) {
+        // Primary color, use as normal
+        MaterialTheme.colorScheme.primary
+    }
 }
 ```
 
 Get more customizable:
 
 ```kotlin
-// Don't limit to the default M3 palettes, use them in your own way
-CompositionLocalProvider(LocalTonalPalettes provides palettes) {
-    40.a1 withNight 80.a1
-}
+// Don't limit to the default M3 palettes, use color mappings in your own way
+40.a1 withNight 80.a1
 ```
 
 Low-level APIs:
