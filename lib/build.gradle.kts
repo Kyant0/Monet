@@ -4,15 +4,8 @@ plugins {
     kotlin("android")
 }
 
-afterEvaluate {
-    publishing {
-        publications.create("maven_public", MavenPublication::class) {
-            groupId = "com.github.Kyant0"
-            artifactId = "Monet"
-            version = "0.1.0-dev01"
-        }
-    }
-}
+group = "com.github.Kyant0"
+version = "0.1.0-dev01"
 
 @Suppress("UnstableApiUsage")
 android {
@@ -57,4 +50,15 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.0-alpha07")
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.3.0-beta01")
     debugImplementation("androidx.compose.ui:ui-test-manifest:1.3.0-beta01")
+}
+
+afterEvaluate {
+    publishing {
+        publications.create("maven_public", MavenPublication::class) {
+            groupId = "com.github.Kyant0"
+            artifactId = "Monet"
+            version = "0.1.0-dev01"
+            from(components.getByName("release"))
+        }
+    }
 }
