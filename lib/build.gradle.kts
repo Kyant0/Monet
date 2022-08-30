@@ -6,9 +6,8 @@ plugins {
 
 publishing {
     publications.create("maven_public", MavenPublication::class) {
-        groupId = "com.kyant"
-        artifactId = "monet"
-        version = "0.0.1-dev01"
+        groupId = "com.github.Kyant0"
+        artifactId = "Monet"
     }
 }
 
