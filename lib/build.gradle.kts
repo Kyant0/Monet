@@ -4,10 +4,13 @@ plugins {
     kotlin("android")
 }
 
-publishing {
-    publications.create("maven_public", MavenPublication::class) {
-        groupId = "com.github.Kyant0"
-        artifactId = "Monet"
+afterEvaluate {
+    publishing {
+        publications.create("maven_public", MavenPublication::class) {
+            groupId = "com.github.Kyant0"
+            artifactId = "Monet"
+            version = "0.1.0-dev01"
+        }
     }
 }
 
