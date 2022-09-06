@@ -14,4 +14,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Monet"
+include(":demo")
 include(":lib")
