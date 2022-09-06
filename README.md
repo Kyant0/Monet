@@ -6,14 +6,16 @@
 
 [Interactive demo](https://Kyant0.github.io/Monet)
 
+Compose version: 1.3.0-beta01
+
 ## Usages
 
 ```kotlin
-// Choose a key color
+// Obtain a key color
 val color = Color.Blue
 
 // Generate tonal palettes with TonalSpot (default) style
-val palettes = color.generateTonalPalettes(style = PaletteStyle.TonalSpot)
+val palettes = color.toTonalPalettes(style = PaletteStyle.TonalSpot)
 
 // In your Theme.kt
 CompositionLocalProvider(LocalTonalPalettes provides palettes) {
