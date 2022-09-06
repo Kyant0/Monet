@@ -10,7 +10,7 @@ public class PaletteStyle(
     public val neutral2Spec: ColorSpec
 ) {
     public companion object {
-        private val VibrantSecondaryHueRotation = listOf(
+        private val VibrantSecondaryHueRotation = arrayOf(
             0 to 18,
             41 to 15,
             61 to 10,
@@ -21,7 +21,7 @@ public class PaletteStyle(
             301 to 12,
             360 to 12
         )
-        private val VibrantTertiaryHueRotation = listOf(
+        private val VibrantTertiaryHueRotation = arrayOf(
             0 to 35,
             41 to 30,
             61 to 20,
@@ -32,7 +32,7 @@ public class PaletteStyle(
             301 to 25,
             360 to 25
         )
-        private val ExpressiveSecondaryHueRotation = listOf(
+        private val ExpressiveSecondaryHueRotation = arrayOf(
             0 to 45,
             21 to 95,
             51 to 45,
@@ -43,7 +43,7 @@ public class PaletteStyle(
             321 to 45,
             360 to 45
         )
-        private val ExpressiveTertiaryHueRotation = listOf(
+        private val ExpressiveTertiaryHueRotation = arrayOf(
             0 to 120,
             21 to 120,
             51 to 120,
@@ -104,7 +104,7 @@ public class PaletteStyle(
             neutral2Spec = ColorSpec({ it / 6 }) { 0.0 }
         )
 
-        private fun Double.hueRotation(list: List<Pair<Int, Int>>): Double {
+        private fun Double.hueRotation(list: Array<Pair<Int, Int>>): Double {
             var i = 0
             val size = list.size - 2
             if (size >= 0) {

@@ -12,8 +12,8 @@
 // Choose a key color
 val color = Color.Blue
 
-// Generate tonal palettes with Vibrant style
-val palettes = color.toHct().generateTonalPalettes(style = PaletteStyle.Vibrant)
+// Generate tonal palettes with TonalSpot (default) style
+val palettes = color.generateTonalPalettes(style = PaletteStyle.TonalSpot)
 
 // In your Theme.kt
 CompositionLocalProvider(LocalTonalPalettes provides palettes) {
@@ -60,6 +60,6 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.Kyant0:Monet:<TAG>")
+    implementation("com.github.Kyant0:Monet:<version>")
 }
 ```

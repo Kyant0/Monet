@@ -14,23 +14,23 @@ import com.kyant.monet.TonalPalettes.Companion.toTonalPalettes
 import kotlin.math.roundToInt
 
 public val LocalTonalPalettes: ProvidableCompositionLocal<TonalPalettes> = staticCompositionLocalOf {
-    Color(0xFF007FAC).toSrgb().toTonalPalettes()
+    Color(0xFF007FAC).toTonalPalettes()
 }
 
 public inline val Number.a1: Color
-    @Composable get() = (LocalTonalPalettes.current accent1 toDouble()).toColor()
+    @Composable get() = LocalTonalPalettes.current accent1 toDouble()
 
 public inline val Number.a2: Color
-    @Composable get() = (LocalTonalPalettes.current accent2 toDouble()).toColor()
+    @Composable get() = LocalTonalPalettes.current accent2 toDouble()
 
 public inline val Number.a3: Color
-    @Composable get() = (LocalTonalPalettes.current accent3 toDouble()).toColor()
+    @Composable get() = LocalTonalPalettes.current accent3 toDouble()
 
 public inline val Number.n1: Color
-    @Composable get() = (LocalTonalPalettes.current neutral1 toDouble()).toColor()
+    @Composable get() = LocalTonalPalettes.current neutral1 toDouble()
 
 public inline val Number.n2: Color
-    @Composable get() = (LocalTonalPalettes.current neutral2 toDouble()).toColor()
+    @Composable get() = LocalTonalPalettes.current neutral2 toDouble()
 
 @Composable
 public infix fun Color.withNight(nightColor: Color): Color {
