@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.github.Kyant0"
-version = "0.1.0-alpha02"
+version = "0.1.0-alpha03"
 
 @Suppress("UnstableApiUsage")
 android {
@@ -57,7 +57,7 @@ afterEvaluate {
         publications.create("maven_public", MavenPublication::class) {
             groupId = "com.github.Kyant0"
             artifactId = "Monet"
-            version = "0.1.0-alpha02"
+            version = "0.1.0-alpha03"
             from(components.getByName("release"))
         }
     }
