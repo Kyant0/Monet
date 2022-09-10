@@ -2,10 +2,9 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("org.jetbrains.compose")
-    `maven-publish`
 }
 
-group = "com.kyant.monet"
+group = "com.kyant.monet.demo"
 version = extra["monet.version"] as String
 
 kotlin {
@@ -18,6 +17,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
+                api(project(":lib"))
                 api(compose.runtime)
                 api(compose.foundation)
                 api(compose.material)
@@ -25,24 +25,30 @@ kotlin {
                 api(compose.material3)
             }
         }
+        val androidMain by getting {
+            dependencies {
+                api(project(":lib"))
+                api(compose.runtime)
+                api(compose.foundation)
+                api(compose.material)
+                @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
+                api(compose.material3)
+                api("androidx.core:core-ktx:1.9.0")
+                api("androidx.activity:activity-compose:1.5.1")
+            }
+        }
     }
 }
 
 android {
-    namespace = "com.kyant.monet"
+    namespace = "com.kyant.monet.demo.common"
     compileSdk = 33
     defaultConfig {
         minSdk = 21
     }
-}
 
-afterEvaluate {
-    publishing {
-        publications.create("maven_public", MavenPublication::class) {
-            groupId = "com.github.Kyant0"
-            artifactId = "Monet"
-            version = extra["monet.version"] as String
-            from(components.getByName("release"))
-        }
+    lint {
+        baseline = file("build/lint-baseline.xml")
     }
 }
+
