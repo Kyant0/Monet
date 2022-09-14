@@ -6,7 +6,7 @@
 
 [Interactive demo](https://Kyant0.github.io/Monet)
 
-Compose version: 1.3.0-beta02
+Compose version: Compose-JB-1.2.0-alpha01-dev774
 
 ## Usages
 
