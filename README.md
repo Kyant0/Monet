@@ -4,7 +4,9 @@
 
 **A Jetpack Compose library that creates your own Material3 palettes**
 
-[Interactive demo](https://Kyant0.github.io/Monet)
+**It is recommended to use [this native library](https://github.com/Kyant0/ComposeMonet) for better performance on Android.**
+
+[Interactive web demo](https://Kyant0.github.io/Monet)
 
 Compose version: Compose-JB-1.2.0-alpha01-dev774
 
