@@ -1,10 +1,8 @@
 # Monet
 
-[![JitPack Release](https://jitpack.io/v/Kyant0/Monet.svg)](https://jitpack.io/#Kyant0/Monet)
+⚠️ Use https://github.com/Kyant0/m3color instead.
 
 **A Jetpack Compose library that creates your own Material3 palettes**
-
-**It is recommended to use [this native library](https://github.com/Kyant0/ComposeMonet) for better performance on Android.**
 
 [Interactive web demo](https://Kyant0.github.io/Monet)
 
